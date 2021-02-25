@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "335254036462",
+    "project_id": "sschat-fa568",
+    "storage_bucket": "sschat-fa568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335254036462:android:c1524bb19a00c1a4d678ff",
+        "android_client_info": {
+          "package_name": "luxs.max.sschat_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335254036462-eu2esavkbg3n008im6c464vbv7pn3rp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "luxs.max.sschat_android",
+            "certificate_hash": "b7ebff05425667867417fe6f58e155b226909cf6"
+          }
+        },
+        {
+          "client_id": "335254036462-c5maf53qasj3o4r7sq7bjtto51phq0h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABU-JCUTXchQUB3XfnWdUk0jXb35530NU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335254036462-c5maf53qasj3o4r7sq7bjtto51phq0h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
