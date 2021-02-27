@@ -22,7 +22,7 @@ class EmptyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         arguments?.takeIf { it.containsKey(EMPTY_TITLE) }?.apply {
             val textView: TextView = view.findViewById(R.id.emptyTextView)
-            textView.text = TAB_TITLES.getOrDefault(getInt(EMPTY_TITLE)-1, "camera")
+            textView.text = TAB_TITLES.getOrDefault(getInt(EMPTY_TITLE)-1, "Contact")
         }
     }
 
