@@ -13,10 +13,4 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
-
-    fun toChannel(view: View) {
-        val navController = findNavController(R.id.nav_graph)
-        navController.navigate(R.id.nav_channel)
-
-    }
 }

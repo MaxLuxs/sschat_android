@@ -51,7 +51,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = TAB_TITLES[position]
             if (position == 0) {
-                tab.setIcon(R.drawable.ic_baseline_camera_alt_24)
+                tab.setIcon(R.drawable.ic_baseline_contacts_24)
             }
             viewPager.setCurrentItem(tab.position, true)
         }.attach()

@@ -5,8 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.example.chattutorial.MainActivity">
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -14,11 +13,11 @@
             tools:listitem="@layout/list_item_channel_custom"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttontochat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="chat"
             android:layout_margin="15dp"
-            android:onClick="toChannel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
