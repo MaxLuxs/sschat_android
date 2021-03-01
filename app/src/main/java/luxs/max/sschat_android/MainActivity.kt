@@ -11,6 +11,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * @author Maksim Lukashevich
+ * For TMS classes
+ * I apologize for the inferiority. Not enough time for my projects
+ * */
+
 const val SIGN_IN_CODE = 41
 
 class MainActivity : AppCompatActivity() {
