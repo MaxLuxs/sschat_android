@@ -2,4 +2,6 @@
     <string name="app_name">sschat_android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_message">Введите сообщение</string>
+    <string name="sign_out">Sign out</string>
 </resources>

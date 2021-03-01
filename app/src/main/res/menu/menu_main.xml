@@ -7,7 +7,6 @@
         android:icon="@drawable/ic_baseline_search_24"
         app:showAsAction="ifRoom"
         app:iconTint="@color/white"
-
         android:title="Search">
     </item>
     <item
@@ -15,7 +14,7 @@
         android:icon="@drawable/ic_baseline_search_24"
         app:iconTint="@color/white"
         app:showAsAction="never"
-        android:title="Compose">
+        android:title="@string/sign_out">
     </item>
 
 </menu>

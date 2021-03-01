@@ -37,21 +37,6 @@ class ChannelListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        val button = view.findViewById<Button>(R.id.buttontochat)
-        button.setOnClickListener {
-            toChannel(it)
-        }
-
         super.onViewCreated(view, savedInstanceState)
-
-
-
-    }
-
-
-    fun toChannel(view: View) {
-        val navController = findNavController(this)
-        navController.navigate(R.id.nav_channel)
     }
 }

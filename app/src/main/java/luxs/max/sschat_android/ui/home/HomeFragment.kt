@@ -1,9 +1,13 @@
 package luxs.max.sschat_android.ui.home
 
+import android.app.PendingIntent
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -12,12 +16,15 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_home.*
+import luxs.max.sschat_android.MainActivity
 import luxs.max.sschat_android.R
 import luxs.max.sschat_android.ui.EmptyFragment
+import luxs.max.sschat_android.ui.channel.ChannelFragment
 import luxs.max.sschat_android.ui.channel_list.ChannelListFragment
 
 const val EMPTY_TITLE = "empty_title"
-val TAB_TITLES = mapOf(1 to "chats", 2 to "status", 3 to "calls")
+val TAB_TITLES = mapOf(1 to "chats", 2 to "status", 3 to "flooder")
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -41,7 +48,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val toolbar: Toolbar = view!!.findViewById(R.id.toolbar)
         activity.setSupportActionBar(toolbar)
 
-
         val tabLayout : TabLayout = view.findViewById(R.id.tabs)
         val chatTab: TabLayout.Tab = tabLayout.getTabAt(2)!!
         viewPager = view.findViewById(R.id.view_pager)
@@ -52,6 +58,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             tab.text = TAB_TITLES[position]
             if (position == 0) {
                 tab.setIcon(R.drawable.ic_baseline_contacts_24)
+            }else if(position == 3){
+                floating_action_button.visibility = View.GONE
+            }else{
+                floating_action_button.visibility = View.VISIBLE
             }
             viewPager.setCurrentItem(tab.position, true)
         }.attach()
@@ -99,6 +109,8 @@ class TabsAdapter(
         val fragment: Fragment
         if (position == 1){
             fragment = ChannelListFragment()
+        }else if (position == 3){
+            fragment = ChannelFragment()
         }else{
             fragment = EmptyFragment()
             fragment.arguments = Bundle().apply {
@@ -107,5 +119,6 @@ class TabsAdapter(
         }
         return fragment
     }
+
 
 }
